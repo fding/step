@@ -1,0 +1,12 @@
+A toy program for stepping through a binary.
+
+Step will set a break point at main, and single step through the entire program or until the user enters q.
+
+At each state, the currently running assembly instruction, the values stored at registers, and the contents stored at the
+top (bottom?) of the stack is displayed. There are helpful annotations, such as the compare flags, documentation for the
+various jump instructions, etc.
+
+Requires the libraries (included) libdasm and libelf. Compiling libdasm is straightforward; libelf requires installation.
+Follow instructions given there.
+
+The target for this program is x86 Linux machines.
