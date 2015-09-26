@@ -2,10 +2,10 @@ CFLAGS=-O2 -Wall -g
 DIRFLAGS=-Llibelf/lib -I/usr/local/include/ 
 LFLAGS=-lncurses -lelf
 
-all: main test
+all: step test
 
-main: main.o libdasm
-	$(CC) $(CFLAGS) $(DIRFLAGS) -o main main.o libdasm/libdasm.o $(LFLAGS)
+step: main.o libdasm
+	$(CC) $(CFLAGS) $(DIRFLAGS) -o step main.o libdasm/libdasm.o $(LFLAGS)
 
 test: test.c
 	$(CC) -o test test.c
